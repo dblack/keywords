@@ -1,0 +1,1910 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: keywords.rb</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>keywords.rb</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>keywords.rb
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Mon Jun 29 20:48:50 -0400 2009</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+RDoc-style documentation <a href="keywords_rb.html#M000021">for</a> Ruby
+keywords (1.9.1).
+</p>
+<p>
+David A. Black
+</p>
+<p>
+June 29, 2009
+</p>
+<p>
+Yes, I KNOW that they aren&#8216;t methods. I&#8216;ve just put them <a
+href="keywords_rb.html#M000023">in</a> that format to produce the familiar
+RDoc output. I&#8216;ve been focusing on the content.
+</p>
+<p>
+If anyone has a good idea <a href="keywords_rb.html#M000021">for</a> how to
+package <a href="keywords_rb.html#M000008">and</a> distribute it, let me
+know. I haven&#8216;t really thought it through.
+</p>
+<p>
+Also, <a href="keywords_rb.html#M000022">if</a> you spot any errors <a
+href="keywords_rb.html#M000028">or</a> significant omissions, let me know.
+Keep <a href="keywords_rb.html#M000023">in</a> mind that I&#8216;m
+documenting the keywords themselves, <a
+href="keywords_rb.html#M000027">not</a> the entities they represent. Thus
+there is <a href="keywords_rb.html#M000027">not</a> full coverage of, say,
+what a <a href="keywords_rb.html#M000012">class</a> is, <a
+href="keywords_rb.html#M000028">or</a> how exceptions work.
+</p>
+<p>
+Changes since first release:
+</p>
+<ul>
+<li>Added <tt>__END__</tt> (thanks Sven Fuchs)
+
+</li>
+<li>Added &#8216;<a href="keywords_rb.html#M000031">retry</a>&#8217; to <a
+href="keywords_rb.html#M000031">retry</a> example (thanks mathie)
+
+</li>
+<li>Corrected description of <a href="keywords_rb.html#M000040">when</a>
+&#8216;<a href="keywords_rb.html#M000030">rescue</a>&#8217; can be used
+(thanks Matt Neuburg)
+
+</li>
+<li>Added <tt><a href="keywords_rb.html#M000016">else</a></tt> <a
+href="keywords_rb.html#M000023">in</a> <a
+href="keywords_rb.html#M000030">rescue</a> context (thanks Rob Biedenharn)
+
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000005">BEGIN</a>&nbsp;&nbsp;
+      <a href="#M000006">END</a>&nbsp;&nbsp;
+      <a href="#M000001">__ENCODING__</a>&nbsp;&nbsp;
+      <a href="#M000003">__END__</a>&nbsp;&nbsp;
+      <a href="#M000004">__FILE__</a>&nbsp;&nbsp;
+      <a href="#M000002">__LINE__</a>&nbsp;&nbsp;
+      <a href="#M000007">alias</a>&nbsp;&nbsp;
+      <a href="#M000008">and</a>&nbsp;&nbsp;
+      <a href="#M000009">begin</a>&nbsp;&nbsp;
+      <a href="#M000010">break</a>&nbsp;&nbsp;
+      <a href="#M000011">case</a>&nbsp;&nbsp;
+      <a href="#M000012">class</a>&nbsp;&nbsp;
+      <a href="#M000013">def</a>&nbsp;&nbsp;
+      <a href="#M000014">defined?</a>&nbsp;&nbsp;
+      <a href="#M000015">do</a>&nbsp;&nbsp;
+      <a href="#M000016">else</a>&nbsp;&nbsp;
+      <a href="#M000017">elsif</a>&nbsp;&nbsp;
+      <a href="#M000018">end</a>&nbsp;&nbsp;
+      <a href="#M000019">ensure</a>&nbsp;&nbsp;
+      <a href="#M000020">false</a>&nbsp;&nbsp;
+      <a href="#M000021">for</a>&nbsp;&nbsp;
+      <a href="#M000022">if</a>&nbsp;&nbsp;
+      <a href="#M000023">in</a>&nbsp;&nbsp;
+      <a href="#M000024">module</a>&nbsp;&nbsp;
+      <a href="#M000025">next</a>&nbsp;&nbsp;
+      <a href="#M000026">nil</a>&nbsp;&nbsp;
+      <a href="#M000027">not</a>&nbsp;&nbsp;
+      <a href="#M000028">or</a>&nbsp;&nbsp;
+      <a href="#M000029">redo</a>&nbsp;&nbsp;
+      <a href="#M000030">rescue</a>&nbsp;&nbsp;
+      <a href="#M000031">retry</a>&nbsp;&nbsp;
+      <a href="#M000032">return</a>&nbsp;&nbsp;
+      <a href="#M000033">self</a>&nbsp;&nbsp;
+      <a href="#M000034">super</a>&nbsp;&nbsp;
+      <a href="#M000035">then</a>&nbsp;&nbsp;
+      <a href="#M000036">true</a>&nbsp;&nbsp;
+      <a href="#M000037">undef</a>&nbsp;&nbsp;
+      <a href="#M000038">unless</a>&nbsp;&nbsp;
+      <a href="#M000039">until</a>&nbsp;&nbsp;
+      <a href="#M000040">when</a>&nbsp;&nbsp;
+      <a href="#M000041">while</a>&nbsp;&nbsp;
+      <a href="#M000042">yield</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000005" class="method-detail">
+        <a name="M000005"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000005.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000005.html');return false;">
+          <span class="method-name">BEGIN</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Designates, via code block, code to be executed unconditionally before
+sequential execution of the program begins. Sometimes used to simulate
+forward references to methods.
+</p>
+<pre>
+   puts times_3(gets.to_i)
+
+   BEGIN {
+     def times_3(n)
+       n * 3
+     end
+   }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000006" class="method-detail">
+        <a name="M000006"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000006.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000006.html');return false;">
+          <span class="method-name">END</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Designates, via code block, code to be executed just prior to program
+termination.
+</p>
+<pre>
+   END { puts &quot;Bye!&quot; }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000001" class="method-detail">
+        <a name="M000001"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000001.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000001.html');return false;">
+          <span class="method-name">__ENCODING__</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The current default encoding, as an <tt>Encoding</tt> instance.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000003" class="method-detail">
+        <a name="M000003"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000003.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000003.html');return false;">
+          <span class="method-name">__END__</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Denotes the <a href="keywords_rb.html#M000018">end</a> of the regular
+source code section of a program file. Lines below <tt>__END__</tt> will <a
+href="keywords_rb.html#M000027">not</a> be executed. Those lines will be
+available via the special filehandle <tt>DATA</tt>. The following code will
+print out two stanzas of personal information. Note that <tt>__END__</tt>
+has to be flush left, <a href="keywords_rb.html#M000008">and</a> has to be
+the only thing on its line.
+</p>
+<pre>
+  DATA.each do |line|
+    first, last, phone, email = line.split('|')
+   puts &lt;&lt;-EOM
+   First name: #{first}
+   Last name:  #{last}
+   Phone:      #{phone}
+   Email:      #{email}
+      EOM
+   end
+ __END__
+ David|Black|123-456-7890|dblack@...
+ Someone|Else|321-888-8888|someone@else
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000004" class="method-detail">
+        <a name="M000004"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000004.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000004.html');return false;">
+          <span class="method-name">__FILE__</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The name of the file currently being executed, including path relative to
+the directory where the application was started up (<a
+href="keywords_rb.html#M000028">or</a> the current directory, <a
+href="keywords_rb.html#M000022">if</a> it has been changed). The current
+file is, <a href="keywords_rb.html#M000023">in</a> some cases, different
+from the startup file <a href="keywords_rb.html#M000021">for</a> the
+running application, which is available <a
+href="keywords_rb.html#M000023">in</a> the global variable <tt>$0</tt>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000002" class="method-detail">
+        <a name="M000002"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000002.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000002.html');return false;">
+          <span class="method-name">__LINE__</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The line number, <a href="keywords_rb.html#M000023">in</a> the current
+source file, of the current line.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000007.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000007.html');return false;">
+          <span class="method-name">alias</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates an <a href="keywords_rb.html#M000007">alias</a> <a
+href="keywords_rb.html#M000028">or</a> duplicate method name <a
+href="keywords_rb.html#M000021">for</a> a given method. The original method
+continues to be accessible via the <a
+href="keywords_rb.html#M000007">alias</a>, even <a
+href="keywords_rb.html#M000022">if</a> it is overriden. Takes two
+method-name arguments (which can be represented by strings <a
+href="keywords_rb.html#M000028">or</a> symbols but can also be the bare
+names themselves).
+</p>
+<pre>
+  class Person
+    def name=(name)
+      puts &quot;Naming your person #{name}!&quot;
+      @name = name
+    end
+
+    alias full_name= name=
+  end
+
+  p = Person.new
+  p.name = &quot;David&quot;        # Naming your person David!
+
+  class Person
+    def name=(name)
+      puts &quot;Please use full_name=&quot;
+    end
+  end
+
+  p.full_name = &quot;David&quot;   # Please use fullname=
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000008" class="method-detail">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000008.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000008.html');return false;">
+          <span class="method-name">and</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Boolean <a href="keywords_rb.html#M000008">and</a> operator. Differs from
+&amp;&amp; <a href="keywords_rb.html#M000023">in</a> that <tt><a
+href="keywords_rb.html#M000008">and</a></tt> has lower precedence. In this
+example:
+</p>
+<pre>
+  puts &quot;Hello&quot; and &quot;Goodbye&quot;
+</pre>
+<p>
+the subexpression <tt>puts &quot;Hello&quot;</tt> is executed first, <a
+href="keywords_rb.html#M000008">and</a> returns <tt><a
+href="keywords_rb.html#M000026">nil</a></tt>. The whole expression thus
+reduces to:
+</p>
+<pre>
+  nil and &quot;Goodbye&quot;
+</pre>
+<p>
+which reduces to <tt><a href="keywords_rb.html#M000026">nil</a></tt>. In
+this example, however:
+</p>
+<pre>
+  puts &quot;Hello&quot; &amp;&amp; &quot;Goodbye&quot;
+</pre>
+<p>
+the expression <tt>&quot;Hello&quot; &amp;&amp; &quot;Goodbye&quot;</tt> is
+used as the argument to <tt>puts</tt>. This expression evaluates to
+&quot;Goodbye&quot;; therefore, the whole statement prints
+&quot;Goodbye&quot;.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000009" class="method-detail">
+        <a name="M000009"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000009.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000009.html');return false;">
+          <span class="method-name">begin</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Together with <tt><a href="keywords_rb.html#M000018">end</a></tt>, delimits
+what is commonly called a &quot;<a
+href="keywords_rb.html#M000009">begin</a>&quot; block (to distinguish it
+from the Proc type of code block). A &quot;<a
+href="keywords_rb.html#M000009">begin</a>&quot; block allows the use of
+<tt><a href="keywords_rb.html#M000041">while</a></tt> <a
+href="keywords_rb.html#M000008">and</a> <tt><a
+href="keywords_rb.html#M000039">until</a></tt> <a
+href="keywords_rb.html#M000023">in</a> modifier position with multi-line
+statements:
+</p>
+<pre>
+  begin
+    i += 1
+    puts i
+  end until i == 10
+</pre>
+<p>
+&quot;Begin&quot; blocks also serve to scope exception raising <a
+href="keywords_rb.html#M000008">and</a> <a
+href="keywords_rb.html#M000030">rescue</a> operations. See <tt><a
+href="keywords_rb.html#M000030">rescue</a></tt> <a
+href="keywords_rb.html#M000021">for</a> examples. A &quot;<a
+href="keywords_rb.html#M000009">begin</a>&quot; block can have an <tt><a
+href="keywords_rb.html#M000016">else</a></tt> clause, which serves no
+purpose (<a href="keywords_rb.html#M000008">and</a> generates a warning) <a
+href="keywords_rb.html#M000038">unless</a> there&#8216;s also a <tt><a
+href="keywords_rb.html#M000030">rescue</a></tt> clause, <a
+href="keywords_rb.html#M000023">in</a> which <a
+href="keywords_rb.html#M000011">case</a> the <tt><a
+href="keywords_rb.html#M000016">else</a></tt> clause is executed <a
+href="keywords_rb.html#M000040">when</a> no exception is raised.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000010" class="method-detail">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000010.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000010.html');return false;">
+          <span class="method-name">break</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Causes unconditional termination of a code block <a
+href="keywords_rb.html#M000028">or</a> <tt><a
+href="keywords_rb.html#M000041">while</a></tt> <a
+href="keywords_rb.html#M000028">or</a> <tt><a
+href="keywords_rb.html#M000039">until</a></tt> block, with control
+transfered to the line after the block. If given an argument, returns that
+argument as the value of the terminated block.
+</p>
+<pre>
+  result = File.open(&quot;lines.txt&quot;) do |fh|
+    fh.each do |line|
+      break line if my_regex.match(line)
+    end
+    nil
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000011" class="method-detail">
+        <a name="M000011"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000011.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000011.html');return false;">
+          <span class="method-name">case</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The <a href="keywords_rb.html#M000011">case</a> statement operator. Case
+statements consist of an optional condition, which is <a
+href="keywords_rb.html#M000023">in</a> the position of an argument to
+<tt><a href="keywords_rb.html#M000011">case</a></tt>, <a
+href="keywords_rb.html#M000008">and</a> zero <a
+href="keywords_rb.html#M000028">or</a> more <tt><a
+href="keywords_rb.html#M000040">when</a></tt> clauses. The first <tt><a
+href="keywords_rb.html#M000040">when</a></tt> clause to match the condition
+(<a href="keywords_rb.html#M000028">or</a> to evaluate to Boolean truth, <a
+href="keywords_rb.html#M000022">if</a> the condition is null)
+&quot;wins&quot;, <a href="keywords_rb.html#M000008">and</a> its code
+stanza is executed. The value of the <a
+href="keywords_rb.html#M000011">case</a> statement is the value of the
+successful <tt><a href="keywords_rb.html#M000040">when</a></tt> clause, <a
+href="keywords_rb.html#M000028">or</a> <tt><a
+href="keywords_rb.html#M000026">nil</a></tt> <a
+href="keywords_rb.html#M000022">if</a> there is no such clause.
+</p>
+<p>
+A <a href="keywords_rb.html#M000011">case</a> statement can <a
+href="keywords_rb.html#M000018">end</a> with an <tt><a
+href="keywords_rb.html#M000016">else</a></tt> clause. Each <tt><a
+href="keywords_rb.html#M000040">when</a></tt> statement can have multiple
+candidate values, separated by commas.
+</p>
+<pre>
+  case x
+  when 1,2,3
+    puts &quot;1, 2, or 3&quot;
+  when 10
+    puts &quot;10&quot;
+  else
+    puts &quot;Some other number&quot;
+  end
+</pre>
+<p>
+Case equality (success by a <tt><a
+href="keywords_rb.html#M000040">when</a></tt> candidate) is determined by
+the <a href="keywords_rb.html#M000011">case</a>-equality <a
+href="keywords_rb.html#M000028">or</a> &quot;threequal&quot; operator,
+<tt>===</tt>. The above example is equivalent to:
+</p>
+<pre>
+  if 1 === x or 2 === x or 3 === x
+    puts &quot;1, 2, or 3&quot;
+  elsif 10 === x
+    puts &quot;10&quot;
+  else
+    puts &quot;Some other number&quot;
+  end
+</pre>
+<p>
+<tt>===</tt> is typically overriden by classes to reflect meaningful <a
+href="keywords_rb.html#M000011">case</a>-statement behavior; <a
+href="keywords_rb.html#M000021">for</a> example, <tt>/abc/ ===
+&quot;string&quot;</tt> checks <a href="keywords_rb.html#M000021">for</a> a
+pattern match from the string.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000012" class="method-detail">
+        <a name="M000012"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000012.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000012.html');return false;">
+          <span class="method-name">class</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Opens a <a href="keywords_rb.html#M000012">class</a> definition block.
+Takes either a constant name <a href="keywords_rb.html#M000028">or</a> an
+expression of the form <tt>&lt;&lt; object</tt>. In the latter <a
+href="keywords_rb.html#M000011">case</a>, opens a definition block <a
+href="keywords_rb.html#M000021">for</a> the singleton <a
+href="keywords_rb.html#M000012">class</a> of <tt>object</tt>.
+</p>
+<p>
+Classes may be opened more than once, <a
+href="keywords_rb.html#M000008">and</a> methods <a
+href="keywords_rb.html#M000008">and</a> constants added during those
+subsequent openings. <tt><a href="keywords_rb.html#M000012">class</a></tt>
+blocks have their own local scope; local variables <a
+href="keywords_rb.html#M000023">in</a> scope already are <a
+href="keywords_rb.html#M000027">not</a> visible inside the block, <a
+href="keywords_rb.html#M000008">and</a> variables created inside the block
+<a href="keywords_rb.html#M000015">do</a> <a
+href="keywords_rb.html#M000027">not</a> survive the block.
+</p>
+<pre>
+   class Person
+     def name=(name)
+       @name = name
+     end
+   end
+
+   david = Person.new
+   class &lt;&lt; david
+     def name=(name)
+       if name == &quot;David&quot;
+         @name = name
+       else
+         puts &quot;Please don't name me other than David!&quot;
+       end
+     end
+   end
+
+   david.name = &quot;Joe&quot; # Please don't name me other than David!&quot;
+   joe = Person.new
+   joe.name = &quot;Joe&quot;
+</pre>
+<p>
+Inside a <tt><a href="keywords_rb.html#M000012">class</a></tt> block,
+<tt><a href="keywords_rb.html#M000033">self</a></tt> is set to the <a
+href="keywords_rb.html#M000012">class</a> object whose block it is. Thus
+it&#8216;s possible to write <a href="keywords_rb.html#M000012">class</a>
+methods (i.e., singleton methods on <a
+href="keywords_rb.html#M000012">class</a> objects) by referring to <tt><a
+href="keywords_rb.html#M000033">self</a></tt>:
+</p>
+<pre>
+  class Person
+    def self.species
+      &quot;Homo sapiens&quot;
+    end
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000013" class="method-detail">
+        <a name="M000013"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000013.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000013.html');return false;">
+          <span class="method-name">def</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Paired with a terminating <tt><a
+href="keywords_rb.html#M000018">end</a></tt>, constitutes a method
+definition. Starts a new local scope; local variables <a
+href="keywords_rb.html#M000023">in</a> existence <a
+href="keywords_rb.html#M000040">when</a> the <tt><a
+href="keywords_rb.html#M000013">def</a></tt> block is entered are <a
+href="keywords_rb.html#M000027">not</a> <a
+href="keywords_rb.html#M000023">in</a> scope <a
+href="keywords_rb.html#M000023">in</a> the block, <a
+href="keywords_rb.html#M000008">and</a> local variables created <a
+href="keywords_rb.html#M000023">in</a> the block <a
+href="keywords_rb.html#M000015">do</a> <a
+href="keywords_rb.html#M000027">not</a> survive beyond the block.
+</p>
+<p>
+<tt><a href="keywords_rb.html#M000013">def</a></tt> can be used either with
+<a href="keywords_rb.html#M000028">or</a> without a specific object:
+</p>
+<ul>
+<li><a href="keywords_rb.html#M000013">def</a> method_name
+
+</li>
+<li><a href="keywords_rb.html#M000013">def</a> object.singleton_method_name
+
+</li>
+</ul>
+<p>
+The parameter list comes after the method name, <a
+href="keywords_rb.html#M000008">and</a> can (<a
+href="keywords_rb.html#M000008">and</a> usually is) wrapped <a
+href="keywords_rb.html#M000023">in</a> parentheses.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000014" class="method-detail">
+        <a name="M000014"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000014.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000014.html');return false;">
+          <span class="method-name">defined?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="keywords_rb.html#M000014">defined?</a> expression</tt> tests
+whether <a href="keywords_rb.html#M000028">or</a> <a
+href="keywords_rb.html#M000027">not</a> <tt>expression</tt> refers to
+anything recognizable (literal object, local variable that has been
+initialized, method name visible from the current scope, etc.). The <a
+href="keywords_rb.html#M000032">return</a> value is <tt><a
+href="keywords_rb.html#M000026">nil</a></tt> <a
+href="keywords_rb.html#M000022">if</a> the expression cannot be resolved.
+Otherwise, the <a href="keywords_rb.html#M000032">return</a> value provides
+information about the expression.
+</p>
+<p>
+Note that the expression is <a href="keywords_rb.html#M000027">not</a>
+executed.
+</p>
+<pre>
+  p defined?(def x; end)   # &quot;expression&quot;
+  x                        # error: undefined method or variable
+
+  p defined?(@x=1)         # &quot;assignment&quot;
+  p @x                     # nil
+</pre>
+<p>
+Assignment to a local variable will, however, have the usually result of
+initializing the variable to <tt><a
+href="keywords_rb.html#M000026">nil</a></tt> by virtue of the assignment
+expression itself:
+</p>
+<pre>
+  p defined?(x=1)          # assignment
+  p x                      # nil
+</pre>
+<p>
+In most cases, the argument to <tt><a
+href="keywords_rb.html#M000014">defined?</a></tt> will be a single
+identifier:
+</p>
+<pre>
+  def x; end
+  p defined?(x)            # &quot;method&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000015" class="method-detail">
+        <a name="M000015"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000015.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000015.html');return false;">
+          <span class="method-name">do</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Paired with <tt><a href="keywords_rb.html#M000018">end</a></tt>, can
+delimit a code block:
+</p>
+<pre>
+  array.each do |element|
+    puts element * 10
+  end
+</pre>
+<p>
+In this context, <tt><a href="keywords_rb.html#M000015">do</a></tt>/<tt><a
+href="keywords_rb.html#M000018">end</a></tt> is equivalent to curly braces,
+except that curly braces have higher precedence. In this example:
+</p>
+<pre>
+  puts [1,2,3].map {|x| x * 10 }
+</pre>
+<p>
+the code block binds to <tt>map</tt>; thus the output is:
+</p>
+<pre>
+  10
+  20
+  30
+</pre>
+<p>
+In this version, however:
+</p>
+<pre>
+  puts [1,2,3].map do |x| x * 10 end
+</pre>
+<p>
+the code is interpreted as <tt>puts([1,2,3].map) <a
+href="keywords_rb.html#M000015">do</a> |x| x * 10 <a
+href="keywords_rb.html#M000018">end</a></tt>. Since <tt>puts</tt>
+doesn&#8216;t take a block, the block is ignored <a
+href="keywords_rb.html#M000008">and</a> the statement prints the value of
+the blockless <tt>[1,2,3].map</tt> (which returns an Enumerator).
+</p>
+<p>
+<tt><a href="keywords_rb.html#M000015">do</a></tt> can also (optionally)
+appear at the <a href="keywords_rb.html#M000018">end</a> of a <tt><a
+href="keywords_rb.html#M000021">for</a></tt>/<tt><a
+href="keywords_rb.html#M000023">in</a></tt> statement. (See <tt><a
+href="keywords_rb.html#M000021">for</a></tt> <a
+href="keywords_rb.html#M000021">for</a> an example.)
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000016" class="method-detail">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000016.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000016.html');return false;">
+          <span class="method-name">else</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The <tt><a href="keywords_rb.html#M000016">else</a></tt> keyword denotes a
+final conditional branch. It appears <a
+href="keywords_rb.html#M000023">in</a> connection with <tt><a
+href="keywords_rb.html#M000022">if</a></tt>, <tt><a
+href="keywords_rb.html#M000038">unless</a></tt>, <a
+href="keywords_rb.html#M000008">and</a> <tt><a
+href="keywords_rb.html#M000011">case</a></tt>, <a
+href="keywords_rb.html#M000008">and</a> <tt><a
+href="keywords_rb.html#M000030">rescue</a></tt>. (In the <a
+href="keywords_rb.html#M000011">case</a> of <tt><a
+href="keywords_rb.html#M000030">rescue</a></tt>, the <tt><a
+href="keywords_rb.html#M000016">else</a></tt> branch is executed <a
+href="keywords_rb.html#M000022">if</a> no exception is raised.) The <tt><a
+href="keywords_rb.html#M000016">else</a></tt> clause is always the last
+branch <a href="keywords_rb.html#M000023">in</a> the entire statement,
+except <a href="keywords_rb.html#M000023">in</a> the <a
+href="keywords_rb.html#M000011">case</a> of <tt><a
+href="keywords_rb.html#M000030">rescue</a></tt> where it can be followed by
+an <tt><a href="keywords_rb.html#M000019">ensure</a></tt> clause.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000017" class="method-detail">
+        <a name="M000017"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000017.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000017.html');return false;">
+          <span class="method-name">elsif</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Introduces a branch <a href="keywords_rb.html#M000023">in</a> a conditional
+(<tt><a href="keywords_rb.html#M000022">if</a></tt> <a
+href="keywords_rb.html#M000028">or</a> <tt><a
+href="keywords_rb.html#M000038">unless</a></tt>) statement. Such a
+statement can contain any number of <tt><a
+href="keywords_rb.html#M000017">elsif</a></tt> branches, including zero.
+</p>
+<p>
+See <tt><a href="keywords_rb.html#M000022">if</a></tt> <a
+href="keywords_rb.html#M000021">for</a> examples.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000018" class="method-detail">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000018.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000018.html');return false;">
+          <span class="method-name">end</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Marks the <a href="keywords_rb.html#M000018">end</a> of a <tt><a
+href="keywords_rb.html#M000041">while</a></tt>, <tt><a
+href="keywords_rb.html#M000039">until</a></tt>, <tt><a
+href="keywords_rb.html#M000009">begin</a></tt>, <tt><a
+href="keywords_rb.html#M000022">if</a></tt>, <tt><a
+href="keywords_rb.html#M000013">def</a></tt>, <tt><a
+href="keywords_rb.html#M000012">class</a></tt>, <a
+href="keywords_rb.html#M000028">or</a> other keyword-based, block-based
+construct.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000019.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000019.html');return false;">
+          <span class="method-name">ensure</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Marks the final, optional clause of a <tt><a
+href="keywords_rb.html#M000009">begin</a></tt>/<tt><a
+href="keywords_rb.html#M000018">end</a></tt> block, generally <a
+href="keywords_rb.html#M000023">in</a> cases where the block also contains
+a <tt><a href="keywords_rb.html#M000030">rescue</a></tt> clause. The code
+<a href="keywords_rb.html#M000023">in</a> the <tt><a
+href="keywords_rb.html#M000019">ensure</a></tt> clause is guaranteed to be
+executed, whether control flows to the <a
+href="keywords_rb.html#M000030">rescue</a> block <a
+href="keywords_rb.html#M000028">or</a> <a
+href="keywords_rb.html#M000027">not</a>.
+</p>
+<pre>
+  begin
+    1/0
+  rescue ZeroDivisionError
+    puts &quot;Can't do that!&quot;
+  ensure
+    puts &quot;That was fun!&quot;
+  end
+</pre>
+<p>
+Output:
+</p>
+<pre>
+  Can't do that!
+ That was fun!
+</pre>
+<p>
+If the statement <tt>1/0</tt> is changed to something harmless, like
+<tt>1/1</tt>, the <tt><a href="keywords_rb.html#M000030">rescue</a></tt>
+clause will <a href="keywords_rb.html#M000027">not</a> be executed but the
+<tt><a href="keywords_rb.html#M000019">ensure</a></tt> clause still will.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000020.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000020.html');return false;">
+          <span class="method-name">false</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="keywords_rb.html#M000020">false</a></tt> denotes a special
+object, the sole instance of <tt>FalseClass</tt>. <tt><a
+href="keywords_rb.html#M000020">false</a></tt> <a
+href="keywords_rb.html#M000008">and</a> <tt><a
+href="keywords_rb.html#M000026">nil</a></tt> are the only objects that
+evaluate to Boolean falsehood <a href="keywords_rb.html#M000023">in</a>
+Ruby (informally, that cause an <tt><a
+href="keywords_rb.html#M000022">if</a></tt> condition to fail.)
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000021" class="method-detail">
+        <a name="M000021"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000021.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000021.html');return false;">
+          <span class="method-name">for</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+A loop constructor, used with <tt><a
+href="keywords_rb.html#M000023">in</a></tt>:
+</p>
+<pre>
+  for a in [1,2,3,4,5] do
+    puts a * 10
+  end
+</pre>
+<p>
+<tt><a href="keywords_rb.html#M000021">for</a></tt> is generally considered
+less idiomatic than <tt>each</tt>; indeed, <tt><a
+href="keywords_rb.html#M000021">for</a></tt> calls <tt>each</tt>, <a
+href="keywords_rb.html#M000008">and</a> is thus essentially a wrapper
+around it.
+</p>
+<pre>
+  obj = Object.new
+  def obj.each
+    yield 1; yield 2
+  end
+  for a in obj
+    puts a
+  end
+</pre>
+<p>
+prints:
+</p>
+<pre>
+  1
+  2
+</pre>
+<p>
+The <tt><a href="keywords_rb.html#M000015">do</a></tt> keyword may
+optionally appear at the <a href="keywords_rb.html#M000018">end</a> of the
+<tt><a href="keywords_rb.html#M000021">for</a></tt> expression:
+</p>
+<pre>
+  for a in array do
+    # etc.
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000022" class="method-detail">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000022.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000022.html');return false;">
+          <span class="method-name">if</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Ruby&#8216;s basic conditional statement constructor. <tt><a
+href="keywords_rb.html#M000022">if</a></tt> evaluates its argument <a
+href="keywords_rb.html#M000008">and</a> branches on the result. Additional
+branches can be added to an <tt><a
+href="keywords_rb.html#M000022">if</a></tt> statement with <tt><a
+href="keywords_rb.html#M000016">else</a></tt> <a
+href="keywords_rb.html#M000008">and</a> <tt><a
+href="keywords_rb.html#M000017">elsif</a></tt>.
+</p>
+<pre>
+  if m.score &gt; n.score
+    puts &quot;m wins!&quot;
+  elsif n.score &gt; m.score
+    puts &quot;n wins!&quot;
+  else
+    puts &quot;Tie!&quot;
+  end
+</pre>
+<p>
+An <a href="keywords_rb.html#M000022">if</a> statement can have more than
+one <tt><a href="keywords_rb.html#M000017">elsif</a></tt> clause (<a
+href="keywords_rb.html#M000028">or</a> none), but can only have one <tt><a
+href="keywords_rb.html#M000016">else</a></tt> clause (<a
+href="keywords_rb.html#M000028">or</a> none). The <tt><a
+href="keywords_rb.html#M000016">else</a></tt> clause must come at the <a
+href="keywords_rb.html#M000018">end</a> of the entire statement.
+</p>
+<p>
+<tt><a href="keywords_rb.html#M000022">if</a></tt> can also be used <a
+href="keywords_rb.html#M000023">in</a> modifier position:
+</p>
+<pre>
+  puts &quot;You lose&quot; if y.score &lt; 10
+</pre>
+<p>
+<tt><a href="keywords_rb.html#M000035">then</a></tt> may optionally follow
+an <tt><a href="keywords_rb.html#M000022">if</a></tt> condition:
+</p>
+<pre>
+  if y.score.nil? then
+    puts &quot;Have you even played the game?&quot;
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000023" class="method-detail">
+        <a name="M000023"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000023.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000023.html');return false;">
+          <span class="method-name">in</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+See <tt><a href="keywords_rb.html#M000021">for</a></tt>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000024" class="method-detail">
+        <a name="M000024"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000024.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000024.html');return false;">
+          <span class="method-name">module</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Opens a <a href="keywords_rb.html#M000024">module</a> definition block.
+Takes a constant (the name of the <a
+href="keywords_rb.html#M000024">module</a>) as its argument. The definition
+block starts a new local scope; existing variables are <a
+href="keywords_rb.html#M000027">not</a> visible inside the block, <a
+href="keywords_rb.html#M000008">and</a> local variables created <a
+href="keywords_rb.html#M000023">in</a> the block <a
+href="keywords_rb.html#M000015">do</a> <a
+href="keywords_rb.html#M000027">not</a> survive the <a
+href="keywords_rb.html#M000018">end</a> of the block.
+</p>
+<p>
+Inside the <a href="keywords_rb.html#M000024">module</a> definition, <tt><a
+href="keywords_rb.html#M000033">self</a></tt> is set to the <a
+href="keywords_rb.html#M000024">module</a> object itself.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000025" class="method-detail">
+        <a name="M000025"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000025.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000025.html');return false;">
+          <span class="method-name">next</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Bumps an iterator, <a href="keywords_rb.html#M000028">or</a> a <tt><a
+href="keywords_rb.html#M000041">while</a></tt> <a
+href="keywords_rb.html#M000028">or</a> <tt><a
+href="keywords_rb.html#M000039">until</a></tt> block,to the <a
+href="keywords_rb.html#M000025">next</a> iteration, unconditionally <a
+href="keywords_rb.html#M000008">and</a> without executing whatever may
+remain of the block.
+</p>
+<pre>
+  [0,1,2,3,4].each do |n|
+    next unless n &gt; 2
+    puts &quot;Big number: #{n}&quot;
+  end
+</pre>
+<p>
+Output:
+</p>
+<pre>
+  Big number: 3
+  Big number: 4
+</pre>
+<p>
+<tt><a href="keywords_rb.html#M000025">next</a></tt> is typically used <a
+href="keywords_rb.html#M000023">in</a> cases like iterating through a list
+of files <a href="keywords_rb.html#M000008">and</a> taking action (<a
+href="keywords_rb.html#M000028">or</a> <a
+href="keywords_rb.html#M000027">not</a>) depending on the filename.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000026" class="method-detail">
+        <a name="M000026"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000026.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000026.html');return false;">
+          <span class="method-name">nil</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+A special &quot;non-object&quot;. <tt><a
+href="keywords_rb.html#M000026">nil</a></tt> is, <a
+href="keywords_rb.html#M000023">in</a> fact, an object (the sole instance
+of <tt>NilClass</tt>), but connotes absence <a
+href="keywords_rb.html#M000008">and</a> indeterminacy. <tt><a
+href="keywords_rb.html#M000026">nil</a></tt> <a
+href="keywords_rb.html#M000008">and</a> <tt><a
+href="keywords_rb.html#M000020">false</a></tt> are the only two objects <a
+href="keywords_rb.html#M000023">in</a> Ruby that have Boolean falsehood
+(informally, that cause an <tt><a
+href="keywords_rb.html#M000022">if</a></tt> condition to fail).
+</p>
+<p>
+<tt><a href="keywords_rb.html#M000026">nil</a></tt> serves as the default
+value <a href="keywords_rb.html#M000021">for</a> uninitialized array
+elements <a href="keywords_rb.html#M000008">and</a> hash values (<a
+href="keywords_rb.html#M000038">unless</a> the default is overridden).
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000027" class="method-detail">
+        <a name="M000027"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000027.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000027.html');return false;">
+          <span class="method-name">not</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Boolean negation.
+</p>
+<pre>
+  not true    # false
+  not 10      # false
+  not false   # true
+</pre>
+<p>
+Similar <a href="keywords_rb.html#M000023">in</a> effect to the negating
+bang (<tt>!</tt>), but has lower precedence:
+</p>
+<pre>
+  not 3 == 4  # true; interpreted as not (3 == 4)
+  !3 == 4     # false; interpreted as (!3) == 4, i.e., false == 4
+</pre>
+<p>
+(The unary <tt>!</tt> also differs <a
+href="keywords_rb.html#M000023">in</a> that it can be overridden.)
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000028" class="method-detail">
+        <a name="M000028"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000028.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000028.html');return false;">
+          <span class="method-name">or</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Boolean <a href="keywords_rb.html#M000028">or</a>. Differs from <tt>||</tt>
+<a href="keywords_rb.html#M000023">in</a> that <tt><a
+href="keywords_rb.html#M000028">or</a></tt> has lower precedence. This
+code:
+</p>
+<pre>
+  puts &quot;Hi&quot; or &quot;Bye&quot;
+</pre>
+<p>
+is interpreted as <tt>(puts &quot;Hi&quot;) <a
+href="keywords_rb.html#M000028">or</a> &quot;Bye&quot;</tt>. Since <tt>puts
+&quot;Hi&quot;</tt> reduces to <tt><a
+href="keywords_rb.html#M000026">nil</a></tt>, the whole expression reduces
+to <tt><a href="keywords_rb.html#M000026">nil</a> <a
+href="keywords_rb.html#M000028">or</a> &quot;Bye&quot;</tt> which evaluates
+to <tt>&quot;Bye&quot;</tt>. (The side-effect printing of &quot;Hi&quot;
+does take place.)
+</p>
+<p>
+This code, however:
+</p>
+<pre>
+  puts &quot;Hi&quot; || &quot;Bye&quot;
+</pre>
+<p>
+is interpreted as <tt>puts(&quot;Hi&quot; || &quot;Bye&quot;)</tt>, which
+reduces to <tt>puts &quot;Hi&quot;</tt> (since <tt>&quot;Hi&quot; ||
+&quot;Bye&quot;</tt> evaluates to <tt>&quot;Hi&quot;</tt>).
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000029" class="method-detail">
+        <a name="M000029"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000029.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000029.html');return false;">
+          <span class="method-name">redo</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Causes unconditional re-execution of a code block, with the same parameter
+bindings as the current execution.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000030" class="method-detail">
+        <a name="M000030"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000030.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000030.html');return false;">
+          <span class="method-name">rescue</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Designates an exception-handling clause. Can occur either inside a <tt><a
+href="keywords_rb.html#M000009">begin</a>&lt;code&gt;/&lt;code&gt;<a
+href="keywords_rb.html#M000018">end</a></tt> block, inside a method
+definition (which implies <tt><a
+href="keywords_rb.html#M000009">begin</a></tt>), <a
+href="keywords_rb.html#M000028">or</a> <a
+href="keywords_rb.html#M000023">in</a> modifier position (at the <a
+href="keywords_rb.html#M000018">end</a> of a statement).
+</p>
+<p>
+By default, <tt><a href="keywords_rb.html#M000030">rescue</a></tt> only
+intercepts <tt>StandardError</tt> <a
+href="keywords_rb.html#M000008">and</a> its descendants, but you can
+specify which exceptions you want handled, as arguments. (This technique
+does <a href="keywords_rb.html#M000027">not</a> work <a
+href="keywords_rb.html#M000040">when</a> <tt><a
+href="keywords_rb.html#M000030">rescue</a></tt> is <a
+href="keywords_rb.html#M000023">in</a> statement-modifier position.)
+Moreover, you can have more than one <tt><a
+href="keywords_rb.html#M000030">rescue</a></tt> clause, allowing <a
+href="keywords_rb.html#M000021">for</a> fine-grained handling of different
+exceptions.
+</p>
+<p>
+In a method (note that <tt>raise</tt> with no argument, <a
+href="keywords_rb.html#M000023">in</a> a <a
+href="keywords_rb.html#M000030">rescue</a> clause, re-raises the exception
+that&#8216;s being handled):
+</p>
+<pre>
+  def file_reverser(file)
+    File.open(file) {|fh| puts fh.readlines.reverse }
+  rescue Errno::ENOENT
+    log &quot;Tried to open non-existent file #{file}&quot;
+    raise
+  end
+</pre>
+<p>
+In a <tt><a href="keywords_rb.html#M000009">begin</a></tt>/<tt><a
+href="keywords_rb.html#M000018">end</a></tt> block:
+</p>
+<pre>
+  begin
+    1/0
+  rescue ZeroDivisionError
+    puts &quot;No way&quot;
+  end
+</pre>
+<p>
+In statement-modifier position:
+</p>
+<pre>
+  while true
+    1/0
+  end rescue nil
+
+  david = Person.find(n) rescue Person.new
+</pre>
+<p>
+<tt><a href="keywords_rb.html#M000030">rescue</a></tt> (except <a
+href="keywords_rb.html#M000023">in</a> statement-modifier position) also
+takes a special argument <a href="keywords_rb.html#M000023">in</a> the
+following form:
+</p>
+<pre>
+  rescue =&gt; e
+</pre>
+<p>
+which will assign the given local variable to the exception object, which
+can <a href="keywords_rb.html#M000035">then</a> be examined inside the
+<tt><a href="keywords_rb.html#M000030">rescue</a></tt> clause.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000031" class="method-detail">
+        <a name="M000031"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000031.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000031.html');return false;">
+          <span class="method-name">retry</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Inside a <tt><a href="keywords_rb.html#M000030">rescue</a></tt> clause,
+<tt><a href="keywords_rb.html#M000031">retry</a></tt> causes Ruby to <a
+href="keywords_rb.html#M000032">return</a> to the top of the enclosing code
+(the <tt><a href="keywords_rb.html#M000009">begin</a></tt> keyword, <a
+href="keywords_rb.html#M000028">or</a> top of method <a
+href="keywords_rb.html#M000028">or</a> block) <a
+href="keywords_rb.html#M000008">and</a> try executing the code again.
+</p>
+<pre>
+  a = 0
+  begin
+    1/a
+  rescue ZeroDivisionError =&gt; e
+    puts e.message
+    puts &quot;Let's try that again...&quot;
+    a = 1
+    retry
+  end
+  puts &quot;That's better!&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000032" class="method-detail">
+        <a name="M000032"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000032.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000032.html');return false;">
+          <span class="method-name">return</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Inside a method definition, executes the <tt><a
+href="keywords_rb.html#M000019">ensure</a></tt> clause, <a
+href="keywords_rb.html#M000022">if</a> present, <a
+href="keywords_rb.html#M000008">and</a> <a
+href="keywords_rb.html#M000035">then</a> returns control to the context of
+the method call. Takes an optional argument (defaulting to <a
+href="keywords_rb.html#M000026">nil</a>), which serves as the <a
+href="keywords_rb.html#M000032">return</a> value of the method. Multiple
+values <a href="keywords_rb.html#M000023">in</a> argument position will be
+returned <a href="keywords_rb.html#M000023">in</a> an array.
+</p>
+<pre>
+  def three
+    return 3
+  ensure
+    puts &quot;Enjoy the 3!&quot;
+  end
+
+  a = 3    # Enjoy the 3!
+  puts a   # 3
+</pre>
+<p>
+Inside a code block, the behavior of <tt><a
+href="keywords_rb.html#M000032">return</a></tt> depends on whether <a
+href="keywords_rb.html#M000028">or</a> <a
+href="keywords_rb.html#M000027">not</a> the block constitutes the body of a
+regular Proc object <a href="keywords_rb.html#M000028">or</a> a
+lambda-style Proc object. In the <a
+href="keywords_rb.html#M000011">case</a> of a lambda, <tt><a
+href="keywords_rb.html#M000032">return</a></tt> causes execution of the
+block to terminate. In the <a href="keywords_rb.html#M000011">case</a> of a
+regular Proc, <tt><a href="keywords_rb.html#M000032">return</a></tt>
+attempts to <a href="keywords_rb.html#M000032">return</a> from the
+enclosing method. If there is no enclosing method, it&#8216;s an error.
+</p>
+<pre>
+  ruby -e 'Proc.new {return}.call'
+    =&gt; -e:1:in `block in &lt;main&gt;': unexpected return (LocalJumpError)
+
+  ruby19 -e 'p lambda {return 3}.call'
+    =&gt; 3
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000033" class="method-detail">
+        <a name="M000033"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000033.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000033.html');return false;">
+          <span class="method-name">self</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="keywords_rb.html#M000033">self</a></tt> is the &quot;current
+object&quot; <a href="keywords_rb.html#M000008">and</a> the default
+receiver of messages (method calls) <a
+href="keywords_rb.html#M000021">for</a> which no explicit receiver is
+specified. Which object plays the role of <tt><a
+href="keywords_rb.html#M000033">self</a></tt> depends on the context.
+</p>
+<ul>
+<li>In a method, the object on which the method was called is <tt><a
+href="keywords_rb.html#M000033">self</a></tt>
+
+</li>
+<li>In a <a href="keywords_rb.html#M000012">class</a> <a
+href="keywords_rb.html#M000028">or</a> <a
+href="keywords_rb.html#M000024">module</a> definition (but outside of any
+method definition contained therein), <tt><a
+href="keywords_rb.html#M000033">self</a></tt> is the <a
+href="keywords_rb.html#M000012">class</a> <a
+href="keywords_rb.html#M000028">or</a> <a
+href="keywords_rb.html#M000024">module</a> object being defined.
+
+</li>
+<li>In a code block associated with a call to <tt>class_eval</tt> (aka
+<tt>module_eval</tt>), <tt><a href="keywords_rb.html#M000033">self</a></tt>
+is the <a href="keywords_rb.html#M000012">class</a> (<a
+href="keywords_rb.html#M000028">or</a> <a
+href="keywords_rb.html#M000024">module</a>) on which the method was called.
+
+</li>
+<li>In a block associated with a call to <tt>instance_eval</tt> <a
+href="keywords_rb.html#M000028">or</a> <tt>instance_exec</tt>, <tt><a
+href="keywords_rb.html#M000033">self</a></tt> is the object on which the
+method was called.
+
+</li>
+</ul>
+<p>
+<tt><a href="keywords_rb.html#M000033">self</a></tt> automatically receives
+message that don&#8216;t have an explicit receiver:
+</p>
+<pre>
+  class String
+    def upcase_and_reverse
+      upcase.reverse
+    end
+  end
+</pre>
+<p>
+In this method definition, the message <tt>upcase</tt> goes to <tt><a
+href="keywords_rb.html#M000033">self</a></tt>, which is whatever string
+calls the method.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000034" class="method-detail">
+        <a name="M000034"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000034.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000034.html');return false;">
+          <span class="method-name">super</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Called from a method, searches along the method lookup path (the classes <a
+href="keywords_rb.html#M000008">and</a> modules available to the current
+object) <a href="keywords_rb.html#M000021">for</a> the <a
+href="keywords_rb.html#M000025">next</a> method of the same name as the one
+being executed. Such method, <a href="keywords_rb.html#M000022">if</a>
+present, may be defined <a href="keywords_rb.html#M000023">in</a> the
+superclass of the object&#8216;s <a
+href="keywords_rb.html#M000012">class</a>, but may also be defined <a
+href="keywords_rb.html#M000023">in</a> the superclass&#8216;s superclass <a
+href="keywords_rb.html#M000028">or</a> any <a
+href="keywords_rb.html#M000012">class</a> on the upward path, as well as
+any <a href="keywords_rb.html#M000024">module</a> mixed <a
+href="keywords_rb.html#M000023">in</a> to any of those classes.
+</p>
+<pre>
+  module Vehicular
+    def move_forward(n)
+      @position += n
+    end
+  end
+
+  class Vehicle
+    include Vehicular  # Adds Vehicular to the lookup path
+  end
+
+  class Car &lt; Vehicle
+    def move_forward(n)
+      puts &quot;Vrooom!&quot;
+      super            # Calls Vehicular#move_forward
+    end
+  end
+</pre>
+<p>
+Called with no arguments <a href="keywords_rb.html#M000008">and</a> no
+empty argument list, <tt><a href="keywords_rb.html#M000034">super</a></tt>
+calls the appropriate method with the same arguments, <a
+href="keywords_rb.html#M000008">and</a> the same code block, as those used
+to call the current method. Called with an argument list <a
+href="keywords_rb.html#M000028">or</a> arguments, it calls the appropriate
+methods with exactly the specified arguments (including none, <a
+href="keywords_rb.html#M000023">in</a> the <a
+href="keywords_rb.html#M000011">case</a> of an empty argument list
+indicated by empty parentheses).
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000035" class="method-detail">
+        <a name="M000035"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000035.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000035.html');return false;">
+          <span class="method-name">then</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Optional component of conditional statements (<tt><a
+href="keywords_rb.html#M000022">if</a></tt>, <tt><a
+href="keywords_rb.html#M000038">unless</a></tt>, <tt><a
+href="keywords_rb.html#M000040">when</a></tt>). Never mandatory, but allows
+<a href="keywords_rb.html#M000021">for</a> one-line conditionals without
+semi-colons. The following two statements are equivalent:
+</p>
+<pre>
+  if a &gt; b; puts &quot;a wins!&quot; end
+  if a &gt; b then puts &quot;a wins!&quot; end
+</pre>
+<p>
+See <tt><a href="keywords_rb.html#M000022">if</a></tt> <a
+href="keywords_rb.html#M000021">for</a> more examples.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000036" class="method-detail">
+        <a name="M000036"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000036.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000036.html');return false;">
+          <span class="method-name">true</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The sole instance of the special <a
+href="keywords_rb.html#M000012">class</a> TrueClass. <tt><a
+href="keywords_rb.html#M000036">true</a></tt> encapsulates Boolean truth;
+however, &lt;emph&gt;all&lt;/emph&gt; objects <a
+href="keywords_rb.html#M000023">in</a> Ruby are <a
+href="keywords_rb.html#M000036">true</a> <a
+href="keywords_rb.html#M000023">in</a> the Boolean sense (informally, they
+cause an <tt><a href="keywords_rb.html#M000022">if</a></tt> test to
+succeed), with the exceptions of <tt><a
+href="keywords_rb.html#M000020">false</a></tt> <a
+href="keywords_rb.html#M000008">and</a> <tt><a
+href="keywords_rb.html#M000026">nil</a></tt>.
+</p>
+<p>
+Because Ruby regards most objects (<a
+href="keywords_rb.html#M000008">and</a> therefore most expressions) as
+&quot;<a href="keywords_rb.html#M000036">true</a>&quot;, it is <a
+href="keywords_rb.html#M000027">not</a> always necessary to <a
+href="keywords_rb.html#M000032">return</a> <tt><a
+href="keywords_rb.html#M000036">true</a></tt> from a method to force a
+condition to succeed. However, it&#8216;s good practice to <a
+href="keywords_rb.html#M000015">do</a> so, as it makes the intention clear.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000037" class="method-detail">
+        <a name="M000037"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000037.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000037.html');return false;">
+          <span class="method-name">undef</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Undefines a given method, <a href="keywords_rb.html#M000021">for</a> the <a
+href="keywords_rb.html#M000012">class</a> <a
+href="keywords_rb.html#M000028">or</a> <a
+href="keywords_rb.html#M000024">module</a> <a
+href="keywords_rb.html#M000023">in</a> which it&#8216;s called. If the
+method is defined higher up <a href="keywords_rb.html#M000023">in</a> the
+lookup path (such as by a superclass), it can still be called by instances
+classes higher up.
+</p>
+<pre>
+  class C
+    def m
+      &quot;Hi&quot;
+    end
+  end
+  class D &lt; C
+  end
+  class E &lt; D
+  end
+
+  class D
+    undef m
+  end
+
+  C.new.m   # Hi
+  D.new.m   # error
+  E.new.m   # error
+</pre>
+<p>
+Note that the argument to <tt><a
+href="keywords_rb.html#M000037">undef</a></tt> is a method name, <a
+href="keywords_rb.html#M000027">not</a> a symbol <a
+href="keywords_rb.html#M000028">or</a> string.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000038" class="method-detail">
+        <a name="M000038"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000038.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000038.html');return false;">
+          <span class="method-name">unless</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The negative equivalent of <tt><a
+href="keywords_rb.html#M000022">if</a></tt>.
+</p>
+<pre>
+  unless y.score &gt; 10
+    puts &quot;Sorry; you needed 10 points to win.&quot;
+  end
+</pre>
+<p>
+See <tt><a href="keywords_rb.html#M000022">if</a></tt>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000039" class="method-detail">
+        <a name="M000039"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000039.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000039.html');return false;">
+          <span class="method-name">until</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The inverse of <tt><a href="keywords_rb.html#M000041">while</a></tt>:
+executes code <a href="keywords_rb.html#M000039">until</a> a given
+condition is <a href="keywords_rb.html#M000036">true</a>, i.e., <a
+href="keywords_rb.html#M000041">while</a> it is <a
+href="keywords_rb.html#M000027">not</a> <a
+href="keywords_rb.html#M000036">true</a>. The semantics are the same as
+those of <tt><a href="keywords_rb.html#M000041">while</a></tt>; see <tt><a
+href="keywords_rb.html#M000041">while</a></tt>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000040" class="method-detail">
+        <a name="M000040"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000040.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000040.html');return false;">
+          <span class="method-name">when</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+See <tt><a href="keywords_rb.html#M000011">case</a></tt>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000041" class="method-detail">
+        <a name="M000041"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000041.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000041.html');return false;">
+          <span class="method-name">while</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="keywords_rb.html#M000041">while</a></tt> takes a condition
+argument, <a href="keywords_rb.html#M000008">and</a> executes the code that
+follows (up to a matching <tt><a
+href="keywords_rb.html#M000018">end</a></tt> delimiter) <a
+href="keywords_rb.html#M000041">while</a> the condition is <a
+href="keywords_rb.html#M000036">true</a>.
+</p>
+<pre>
+  i = 0
+  while i &lt; 10
+    i += 1
+  end
+</pre>
+<p>
+The value of the whole <tt><a
+href="keywords_rb.html#M000041">while</a></tt> statement is the value of
+the last expression evaluated the last time through the code. If the code
+is <a href="keywords_rb.html#M000027">not</a> executed (because the
+condition is <a href="keywords_rb.html#M000020">false</a> at the beginning
+of the operation), the <tt><a
+href="keywords_rb.html#M000041">while</a></tt> statement evaluates to
+<tt><a href="keywords_rb.html#M000026">nil</a></tt>.
+</p>
+<p>
+<tt><a href="keywords_rb.html#M000041">while</a></tt> can also appear <a
+href="keywords_rb.html#M000023">in</a> modifier position, either <a
+href="keywords_rb.html#M000023">in</a> a single-line statement <a
+href="keywords_rb.html#M000028">or</a> <a
+href="keywords_rb.html#M000023">in</a> a multi-line statement using a
+<tt><a href="keywords_rb.html#M000009">begin</a></tt>/<tt><a
+href="keywords_rb.html#M000018">end</a></tt> block. In the one-line <a
+href="keywords_rb.html#M000011">case</a>:
+</p>
+<p>
+i = 0 i += 1 <a href="keywords_rb.html#M000041">while</a> i &lt; 10
+</p>
+<p>
+the leading code is <a href="keywords_rb.html#M000027">not</a> executed at
+all <a href="keywords_rb.html#M000022">if</a> the condition is <a
+href="keywords_rb.html#M000020">false</a> at the start. However, <a
+href="keywords_rb.html#M000023">in</a> the &quot;<a
+href="keywords_rb.html#M000009">begin</a>&quot;-block <a
+href="keywords_rb.html#M000011">case</a>:
+</p>
+<pre>
+  i = 0
+  begin
+    i += 1
+    puts i
+  end while i &lt; 10
+</pre>
+<p>
+the block will be executed at least once, before the condition is tested
+the first time.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000042" class="method-detail">
+        <a name="M000042"></a>
+
+        <div class="method-heading">
+          <a href="keywords_rb.src/M000042.html" target="Code" class="method-signature"
+            onclick="popupCode('keywords_rb.src/M000042.html');return false;">
+          <span class="method-name">yield</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Called from inside a method body, yields control to the code block (<a
+href="keywords_rb.html#M000022">if</a> any) supplied as part of the method
+call. If no code block has been supplied, calling <tt><a
+href="keywords_rb.html#M000042">yield</a></tt> raises an exception.
+</p>
+<p>
+<tt><a href="keywords_rb.html#M000042">yield</a></tt> can take an argument;
+any values thus yielded are bound to the block&#8216;s parameters. The
+value of a call to <tt><a href="keywords_rb.html#M000042">yield</a></tt> is
+the value of the executed code block.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
