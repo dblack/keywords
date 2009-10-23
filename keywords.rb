@@ -492,6 +492,24 @@
   #
   # <code>next</code> is typically used in cases like iterating through a list
   # of files and taking action (or not) depending on the filename. 
+  #
+  # <code>next</code> can take a value, which will be the value returned
+  # for the current iteration of the block. 
+  #
+  #   sizes = [0,1,2,3,4].map do |n|
+  #     next("big") if n > 2
+  #     puts "Small number detected!"
+  #     "small"
+  #   end
+  #
+  #   p sizes
+  #
+  # Output:
+  #
+  #   Small number detected!
+  #   Small number detected!
+  #   Small number detected!
+  #   ["small", "small", "small", "big", "big"]
   def next
   end
 
@@ -633,7 +651,7 @@
   #     puts "Enjoy the 3!"
   #   end
   #
-  #   a = 3    # Enjoy the 3!
+  #   a = three    # Enjoy the 3!
   #   puts a   # 3
   #
   # Inside a code block, the behavior of <code>return</code> depends on whether
