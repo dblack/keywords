@@ -56,7 +56,7 @@
     </tr>
     <tr class="top-aligned-row">
       <td><strong>Last Update:</strong></td>
-      <td>Mon Jun 29 20:48:50 -0400 2009</td>
+      <td>Thu Oct 22 21:37:46 -0400 2009</td>
     </tr>
     </table>
   </div>
@@ -1178,6 +1178,29 @@ of files <a href="keywords_rb.html#M000008">and</a> taking action (<a
 href="keywords_rb.html#M000028">or</a> <a
 href="keywords_rb.html#M000027">not</a>) depending on the filename.
 </p>
+<p>
+<tt><a href="keywords_rb.html#M000025">next</a></tt> can take a value,
+which will be the value returned <a href="keywords_rb.html#M000021">for</a>
+the current iteration of the block.
+</p>
+<pre>
+  sizes = [0,1,2,3,4].map do |n|
+    next(&quot;big&quot;) if n &gt; 2
+    puts &quot;Small number detected!&quot;
+    &quot;small&quot;
+  end
+
+  p sizes
+</pre>
+<p>
+Output:
+</p>
+<pre>
+  Small number detected!
+  Small number detected!
+  Small number detected!
+  [&quot;small&quot;, &quot;small&quot;, &quot;small&quot;, &quot;big&quot;, &quot;big&quot;]
+</pre>
         </div>
       </div>
 
@@ -1462,7 +1485,7 @@ returned <a href="keywords_rb.html#M000023">in</a> an array.
     puts &quot;Enjoy the 3!&quot;
   end
 
-  a = 3    # Enjoy the 3!
+  a = three    # Enjoy the 3!
   puts a   # 3
 </pre>
 <p>
