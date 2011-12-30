@@ -116,7 +116,8 @@
   #     end
   #   end
   #
-  #   p.full_name = "David"   # Please use fullname=
+  #   p.name = "Joe"          # Please use full_name=
+  #   p.full_name = "Joe"     # Naming your person Joe!
   def alias
   end
 
