@@ -108,7 +108,10 @@
   #   end
   #
   #   p = Person.new
-  #   p.name = "David"        # Naming your person David!
+  #   p.full_name = "David" # => Naming your person David!
+  #
+  #   # Can still use name=
+  #   p.name = "Jack"       # => Naming your person Jack!
   #
   #   class Person
   #     def name=(name)
@@ -116,7 +119,9 @@
   #     end
   #   end
   #
-  #   p.full_name = "David"   # Please use fullname=
+  #   # Even though name= got overriden - fullname= still works
+  #   p.full_name = "David" # => Naming your person David!
+  #   p.name = "David"      # => Please use fullname=
   def alias
   end
 
